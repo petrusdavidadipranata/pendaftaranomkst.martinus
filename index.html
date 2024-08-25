@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="/musicbg.mp3">
+        Your browser is not available to play music
+    </audio>
+    <div class="container">
+        <h2 class="text-center"><i class="fas fa-clipboard-list"></i> Form Pendaftaran Acara OMK </h2>
+        <hr>
+        <form name="regis-form" id="regis-form" action="#" method="post" enctype="multipart/form-data">
+            <div class="mb-3 card p-3">
+                <label for="nama" class="form-label"><i class="fas fa-user"></i> Nama</label>
+                <hr>
+                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+            <div class="mb-3 card p-3 animate__animated animate__slideInUp animate__slower">
+                <label for="stasi" class="form-label"><i class="fas fa-church"></i> Asal Stasi atau Paroki</label>
+                <hr>
+                <select class="form-select" id="stasi" name="stasi" required>
+                    <option hidden value="">Pilih Stasi/Paroki</option>
+                    <option value="Jojog">Jojog</option>
+                    <option value="Tulusrejo">Tulusrejo</option>
+                    <option value="Batanghari">Batanghari</option>
+                    <option value="Balekencono">Balekencono</option>
+                    <option value="Selorejo">Selorejo</option>
+                    <option value="Sambikarto">Sambikarto</option>
+                </select>
+            </div>
+            <div class="mb-3 card p-3 animate__animated animate__slideInUp animate__slower">
+                <label class="form-label"><i class="fas fa-check-circle"></i> Apakah kamu berjanji tidak membawa hal apapun yang bersifat merugikan (MIRAS, SAJAM, DLL)?</label>
+                <hr>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="janji" id="janji" value="Ya" required>
+                    <label class="form-check-label" for="janji">Ya, Saya berjanji</label>
+                </div>
+            </div>
+            <div class="mb-3 card p-3 animate__animated animate__slideInUp animate__slower">
+                <label for="kesehatan" class="form-label"><i class="fas fa-heartbeat"></i> Apakah Kamu memiliki kondisi kesehatan yang perlu diperhatikan? (Misalnya alergi, penyakit kronis, dll.)</label>
+                <hr>
+                <textarea class="form-control" id="kesehatan" name="kesehatan" rows="3" placeholder="Jelaskan kondisi kesehatan kamu jika ada"></textarea>
+            </div>
+            <div class="mb-3 card p-3 animate__animated animate__slideInUp animate__slower">
+                <label for="pengobatan" class="form-label"><i class="fas fa-pills"></i> Apakah Kamu sedang menjalani pengobatan tertentu? Jika ya, sebutkan jenis obat dan frekuensi penggunaan.</label>
+                <hr>
+                <textarea class="form-control" id="pengobatan" name="pengobatan" rows="3" placeholder="Jelaskan pengobatan yang sedang Kamu jalani"></textarea>
+            </div>
+            <div class="mb-3 card p-3 animate__animated animate__slideInUp animate__slower">
+                <label class="form-label"><i class="fas fa-tasks"></i> Kamu setuju untuk mengikuti seluruh rangkaian kegiatan dari awal hingga akhir?</label>
+                <hr>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="persetujuan" id="persetujuan" value="Ya" required>
+                    <label class="form-check-label" for="persetujuan">Ya</label>
+                </div>
+            </div>
+            <div class="mb-3 card p-3 animate__animated animate__slideInUp animate__slower">
+                <label for="informasi" class="form-label"><i class="fas fa-info-circle"></i> Dengan ini, saya menyatakan bahwa informasi yang saya berikan adalah benar dan saya bertanggung jawab penuh atas data yang telah saya isi.</label>
+                <hr>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="informasi" name="informasi" value="Ya" required>
+                    <label class="form-check-label" for="informasi">Saya setuju</label>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center mb-5 animate__animated animate__slideInUp animate__slower">
+                <button class="my-link-class">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fa-regular fa-paper-plane"></i>Kirim
+                </button>
+            </div>
+        </form>
+    </div>
+    <footer class="text-center py-2 mt-5 text-light">
+        <p>&copy; 2024 Form made with <span class="text-danger">❤️</span> by omkst.martinus</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
